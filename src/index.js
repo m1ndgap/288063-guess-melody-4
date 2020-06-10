@@ -8,10 +8,10 @@ const settings = {
 };
 
 ReactDOM.render(
-  <App
-    errorCount = {settings.errorCount}
-    time = {settings.gameTime}
-  />,
-  document.querySelector(`#root`)
+    <App
+      errorCount = {settings.errorCount}
+      time = {settings.gameTime}
+    />,
+    document.querySelector(`#root`)
 );
 
