@@ -1,6 +1,5 @@
 import React from "react";
 
-
 const WelcomeScreen = (props) => {
   const {time, errorCount} = props;
 
