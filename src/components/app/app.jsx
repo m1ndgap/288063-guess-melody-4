@@ -14,7 +14,7 @@ const App = (props) => {
   );
 };
 
-App.proptypes = {
+App.propTypes = {
   time: PropTypes.number.isRequired,
   errorCount: PropTypes.number.isRequired,
 };

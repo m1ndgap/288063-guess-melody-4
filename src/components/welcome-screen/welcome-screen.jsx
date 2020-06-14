@@ -21,7 +21,7 @@ const WelcomeScreen = (props) => {
   );
 };
 
-WelcomeScreen.proptypes = {
+WelcomeScreen.propTypes = {
   time: PropTypes.number.isRequired,
   errorCount: PropTypes.number.isRequired,
 };
