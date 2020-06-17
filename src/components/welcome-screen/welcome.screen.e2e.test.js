@@ -23,12 +23,12 @@ describe(`Welcome Screen Component`, () => {
 
     const welcomeButton = welcomeScreen.find(`button.welcome__button`);
 
-    welcomeButton.simulate(`click`, { preventDefault() {} });
+    welcomeButton.simulate(`click`, {preventDefault() {}});
     // welcomeButton.simulate(`click`, { preventDefault() {} }); // if we use mount instead of shallow
 
     welcomeScreen.update();
 
     expect(onWelcomeBtnClick.mock.calls.length).toBe(1);
-    //expect(onWelcomeBtnClick).toHaveBeenCalledTimes(1);
+    // expect(onWelcomeBtnClick).toHaveBeenCalledTimes(1);
   });
 });
