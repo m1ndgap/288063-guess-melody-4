@@ -7,7 +7,7 @@ import WelcomeScreen from "../welcome-screen/welcome-screen.jsx";
 import ArtistQuestionScreen from "../artist-question-screen/artist-question-screen.jsx";
 import GenreQuestionScreen from "../genre-question-screen/genre-question-screen.jsx";
 
-//const welcomeButtonHandler = () => {};
+// const welcomeButtonHandler = () => {};
 class App extends PureComponent {
   constructor(props) {
     super(props);
@@ -66,8 +66,9 @@ class App extends PureComponent {
     return null;
   }
 
-  render () {
-    const {errorCount, time, questions} = this.props;
+  render() {
+    const {questions} = this.props;
+    // ^ errorCount, time,
     return (
       <BrowserRouter>
         <Switch>
@@ -88,8 +89,8 @@ class App extends PureComponent {
           </Route>
         </Switch>
       </BrowserRouter>
-      );
-  };
+    );
+  }
 
 }
 

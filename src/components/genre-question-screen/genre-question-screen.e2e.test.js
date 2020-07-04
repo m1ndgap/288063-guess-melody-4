@@ -1,7 +1,6 @@
 import React from "react";
 import {configure, shallow} from "enzyme";
 import Adapter from "enzyme-adapter-react-16";
-import GenreQuestionsScreen from "./genre-question-screen";
 import GenreQuestionScreen from "./genre-question-screen";
 
 configure({adapter: new Adapter()});
@@ -36,10 +35,10 @@ describe(`GenreQuestionScreen E2E`, () => {
     const {question} = mock;
     const onAnswer = jest.fn();
     const genreQuestion = shallow(
-      <GenreQuestionScreen
-        onAnswer={onAnswer}
-        question={question}
-      />);
+        <GenreQuestionScreen
+          onAnswer={onAnswer}
+          question={question}
+        />);
     const form = genreQuestion.find(`form`);
     const formSendPrevention = jest.fn();
     form.simulate(`submit`, {
@@ -61,7 +60,7 @@ describe(`GenreQuestionScreen E2E`, () => {
     />);
 
     const form = genreQuestion.find(`form`);
-    const inputTwo = genreQuestion.find(`input`).at(1)
+    const inputTwo = genreQuestion.find(`input`).at(1);
 
     inputTwo.simulate(`change`, {target: {checked: true}});
     form.simulate(`submit`, {preventDefault() {}});
@@ -72,7 +71,7 @@ describe(`GenreQuestionScreen E2E`, () => {
     expect(onAnswer.mock.calls[0][1]).toMatchObject(userAnswer);
 
     expect(
-      genreQuestion.find(`input`).map((it) => it.prop(`checked`))
+        genreQuestion.find(`input`).map((it) => it.prop(`checked`))
     ).toEqual(userAnswer);
   });
 });
